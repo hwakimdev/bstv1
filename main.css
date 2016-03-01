@@ -1,0 +1,15 @@
+body{
+	overflow: auto;
+}
+#stph{
+	background-color: #c0c0c0;
+}
+#thph{
+	background-color: #c0c0c0;
+}
+#output{
+	padding-left:50px;
+}
+#errM{
+	color: darkred;
+}

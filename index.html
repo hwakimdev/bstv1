@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CCTVTOOLS</title>
+<!-- 
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+ -->
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" href="bootstrap-3.3.6-dist/css/bootstrap.min.css">
+<script src="bootstrap-3.3.6-dist/js/bootstarp.min.js"></script>
+<script src="jquery-1.12.0.js"></script>
+</head>
+
+<body>
+<div align="center">
+<img src="images/logo11.png" class="img-responsive" alt="BSTsecurity">
+</div>
+<nav class="navbar navbar-inverse">
+
+    
+	
+  
+	
+	<ul class="nav navbar-nav">
+		<li id="cst">
+			<a href="#stph">Caclculate Storage</a>
+		</li>
+		<li id="ctg">
+			<a href="#thph">Calculate Throughput</a>
+		</li>
+		<li>
+			<a href="#" data-toggle="popover" title="Popover Header" data-content="Some content inside the popover">Design components</a>
+		</li>
+	</ul>
+
+</nav>
+<div class="row">
+<div class="col-sm-9">
+	
+	<div class="table-responsive">
+		<table class="table" id="tablerows">
+			<thead>
+				<tr>
+					<th>Resolution</th>
+                    <th>Frames Rate</th>
+                    <th>Quantity</th>
+                    <th>Storage days</th>
+                    <th>Motion Hours</th>
+                    <th>Delete</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+	
+</div>
+
+<div class="col-sm-3">
+	
+	
+			<div class="form-group">
+				<legend>Add Camera Sets</legend>
+			
+             
+			 <label for="resolid">Select a Resolution</label>
+			 
+			 <select name="resolid" id="resolid" class="form-control" required="required">
+				 <option value="4CIF">4CIF</option>
+				 <option value="720p">720P</option>
+				 <option value="1080p">1080P</option>
+				 <option value="3M">3M</option>
+			 </select>
+			 
+			 <label for="fpsid">Frames rate</label>
+			 
+			 <input type="number" name="" id="fpsid" class="form-control" value="" min="1" max="30" step="" required="required" title="">
+			 
+			 <label for="qtyid">Quantity</label>
+			 
+			 <input type="number" name="" id="qtyid" class="form-control" value="" min="0" max="" step="" required="required" title="">
+			 
+			 <label for="daysid">Number of days</label>
+			 
+			 <input type="number" name="" id="daysid" class="form-control" value="" min="1" max="" step="" required="required" title="">
+			 
+			 <label for="hoursid" >Mours of motion a day</label>
+			 
+			 <input type="number" name="" id="hoursid" class="form-control" value="" min="1" max="24" step="" required="required" title="">
+			 
+			<div class="form-group">
+				<div>
+					<button type="button" class="btn btn-primary form-control" id="addbtn">ADDSET</button>
+				</div>				
+			</div>		
+</div>
+<output id="errM"></output>
+</div>
+
+<!--end of form-->
+<div class="row">
+	<div class="col-xs-4">
+		
+		<div class="panel panel-default">
+			  <div class="panel-heading" id="stph">
+					<h3 class="panel-title">Storage results</h3>
+			  </div>
+			  <div class="panel-body" id="stresult">
+					Storage Results goes here
+			  </div>
+		</div>
+		
+	</div>
+	<!--end of stresult-->
+	<div class="col-xs-4">
+		
+		<div class="panel panel-default">
+			  <div class="panel-heading" id="thph">
+					<h3 class="panel-title">Throughput results</h3>
+			  </div>
+			  <div class="panel-body" id="tgresult">
+					Troughput Results goes here
+			  </div>
+		</div>
+		
+	</div>
+	<!--end of throughput result -->
+</div>
+
+
+<footer> <div id="output"></div></footer>
+<script src="main.js"></script>
+
+
+</body>
+
+</html>
